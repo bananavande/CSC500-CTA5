@@ -1,0 +1,42 @@
+###Part 1
+#Asking for number of years.
+years = int(input('Enter number of years:'))
+
+#Calculating the number of months.
+months = years * 12
+
+total_inches = 0  #initilizing total inches of rainfall.
+
+#Creating a nested loop.
+for year in range(years):
+  for month in range(1, 13):
+    rainfall = float(input('Enter total inches of rainfall:'))
+    print('Rainfall for the month: {} inches'.format(rainfall))
+    total_inches += rainfall
+
+#Calculating the average rainfall.
+avg_rain = total_inches / months
+print('The number of months is {}, the total inches of rainfall is {} inches, ' 
+      'and the average rainfall per month is {:.2f} inches.'.format(months, total_inches, avg_rain))
+
+###Part 2
+#Asking for number of books purchased.
+books = int(input('Enter number of books purchased:'))
+
+#Displaying the number of points awarded.
+if 0 <= books < 2:
+  print('You earned 0 points.')
+elif 2 <= books < 4:
+  print('You earned 5 points.')
+elif 4 <= books < 6:
+  print('You earned 15 points.')
+elif 6 <= books < 8:
+  print('You earned 30 points.')
+elif books >= 8:
+  print('You earned 60 points.')
+else:
+  print('Invalid entry.')
+
+#All tasks have been completed. Algorithm end.
+
+
